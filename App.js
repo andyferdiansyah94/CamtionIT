@@ -21,21 +21,6 @@ const Tab = createBottomTabNavigator();
 
 const noHead = { headerShown: false };
 
-const MainStackNavigator = () => (
-  <Stack.Navigator>
-    <Stack.Screen name="Cover" component={Cover} options={noHead} />
-    <Stack.Screen name="Choose" component={Choose} options={noHead} />
-    <Stack.Screen name="Signup" component={Signup} options={noHead} />
-    <Stack.Screen name="Login" component={Login} options={noHead} />
-    <Stack.Screen name="Home" component={Home} options={noHead} />
-    <Stack.Screen name="Jurusan" component={Jurusan} options={noHead} />
-    <Stack.Screen name="Detail Jurusan" component={JurusanDetail} options={noHead} />
-    <Stack.Screen name="EditProfile" component={EditProfile} options={noHead}/>
-    <Stack.Screen name="Profile" component={Profile} options={noHead}/>
-    <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-  </Stack.Navigator>
-);
-
 const Tabs = () => (
   <Tab.Navigator
     screenOptions={({ route, navigation }) => ({
@@ -100,7 +85,18 @@ const App = () => {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <MainStackNavigator />
+        <Stack.Navigator initialRouteName="Cover">
+          <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
+          <Stack.Screen name="Cover" component={Cover} options={noHead} />
+          <Stack.Screen name="Choose" component={Choose} options={noHead} />
+          <Stack.Screen name="Signup" component={Signup} options={noHead} />
+          <Stack.Screen name="Login" component={Login} options={noHead} />
+          {/* <Stack.Screen name="Home" component={Home} options={noHead} /> */}
+          {/* <Stack.Screen name="Jurusan" component={Jurusan} options={noHead} /> */}
+          <Stack.Screen name="Detail Jurusan" component={JurusanDetail} options={noHead} />
+          <Stack.Screen name="EditProfile" component={EditProfile} options={noHead}/>
+          {/* <Stack.Screen name="Profile" component={Profile} options={noHead}/> */}
+        </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
   );
