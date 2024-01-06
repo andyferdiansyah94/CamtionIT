@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Box, VStack, Image, Text, Pressable, HStack, ScrollView } from "native-base";
-import { Header } from "../components";
+import { Header } from "../../components";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 
@@ -29,7 +29,7 @@ const Profile = () => {
       <ScrollView flex={1} bg={"white"} p={4}>
         <VStack space={4} alignItems="center">
           <Image
-            source={require("../assets/foto.png")}
+            source={require("../../assets/foto.png")}
             alt="Profil Logo"
             size={150}
             borderRadius={75}

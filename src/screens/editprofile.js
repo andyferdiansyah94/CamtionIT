@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Box, VStack, Input, Button, Text, Spinner, Image } from "native-base";
-import { Header } from "../components";
+import { Header } from "../../components";
 import { Feather } from "@expo/vector-icons";
 import { Alert } from "react-native";
 
 // Import gambar dari direktori lokal
-const profileImage = require("../assets/foto.png");
+const profileImage = require("../../assets/foto.png");
 
 const EditProfile = ({ navigation }) => {
   const [name, setName] = useState("Novita Viomaito");

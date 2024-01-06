@@ -4,16 +4,33 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider, Text } from "native-base";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import Login from "./screens/login";
-import Signup from "./screens/signup";
-import Cover from "./screens/cover";
-import Choose from "./screens/choose";
-import Home from "./screens/home";
-import Jurusan from "./screens/jurusan";
-import Konsultasi from "./screens/konsultasi";
-import Profile from "./screens/profile";
-import EditProfile from "./screens/editprofile";
-import JurusanDetail from "./screens/jurusan-detail";
+import { 
+  Home,
+  Login,
+  Cover,
+  SignUp,
+  Choose,
+  Jurusan,
+  JurusanDetail,
+  Konsultasi,
+  Profile,
+  EditProfile
+ } from "./src/screens"
+// import { Jurusan, Home, Login, Cover, SignUp, Choose, JurusanDetail, Konsultasi, EditProfile, Profile } from "./src/screens";
+// import Choose from "./src/screens/choose";
+// import Cover from "./src/screens/cover";
+// import Home from "./src/screens/home";
+// import Konsultasi from "./src/screens/konsultasi";
+// import Jurusan from "./src/screens/jurusan";
+// import JurusanDetail from "./src/screens/jurusan-detail";
+// import Profile from "./src/screens/profile";
+// import EditProfile from "./src/screens/editprofile";
+// import SignUp from "./src/screens/signup";
+// import Login from "./src/screens/login";
+
+
+
+
 
 // Navigator Declaration
 const Stack = createNativeStackNavigator();
@@ -89,13 +106,12 @@ const App = () => {
           <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
           <Stack.Screen name="Cover" component={Cover} options={noHead} />
           <Stack.Screen name="Choose" component={Choose} options={noHead} />
-          <Stack.Screen name="Signup" component={Signup} options={noHead} />
+          <Stack.Screen name="SignUp" component={SignUp} options={noHead} />
           <Stack.Screen name="Login" component={Login} options={noHead} />
-          {/* <Stack.Screen name="Home" component={Home} options={noHead} /> */}
-          {/* <Stack.Screen name="Jurusan" component={Jurusan} options={noHead} /> */}
+          <Stack.Screen name="Jurusan" component={Jurusan} options={noHead} />
+          <Stack.Screen name="Konsultasi" component={Konsultasi} options={noHead} />
           <Stack.Screen name="Detail Jurusan" component={JurusanDetail} options={noHead} />
           <Stack.Screen name="EditProfile" component={EditProfile} options={noHead}/>
-          {/* <Stack.Screen name="Profile" component={Profile} options={noHead}/> */}
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
